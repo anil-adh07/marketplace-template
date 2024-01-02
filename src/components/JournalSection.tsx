@@ -1,8 +1,8 @@
 export default function JournalSection() {
   return (
     <div className="journal-section border border-primaryA2">
-      <div className="flex justify-between flex-col  items-center text-primaryA1">
-        <div className="pt-8 text-6xl">
+      <div className="flex justify-between flex-col  items-center text-primaryA1 break-words">
+        <div className="pt-8 text-4xl md:text-6xl font-modern">
           <h1>Our Journal</h1>
         </div>
         <div className="py-4 text-lg  text-center">
@@ -16,7 +16,7 @@ export default function JournalSection() {
             Visit Journal
           </button>
         </div>
-        <div className="grid grid-cols-3 pt-10 p-4">
+        <div className="grid grid-cols-3 pt-10 p-4 break-words">
           <div className="p-4">
             <img src="images/image8.jpg" alt=""></img>
             <div className="flex flex-col pt-2">

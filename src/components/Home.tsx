@@ -10,7 +10,7 @@ import LastSection from "./LastSection";
 
 export default function Home() {
   return (
-    <div className="bg-primaryB3 ">
+    <div className="bg-primaryB3">
       <div className="ml-10 mr-12">
         <Header />
 

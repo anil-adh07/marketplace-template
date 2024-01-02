@@ -18,6 +18,7 @@ export default {
       width: { 0.5: "1px" },
       fontFamily: {
         modern: ["Bonvivantserif, sans-serif"],
+        sans: "Poppins, sans-serif",
       },
     },
   },

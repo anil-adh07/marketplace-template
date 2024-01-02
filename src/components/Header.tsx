@@ -15,26 +15,24 @@ export default function Header() {
   };
 
   return (
-    <>
-      <div className=" bg-primaryB3   ">
-        <div className=" border-x border-primaryA2">
-          <div className="grid grid-cols-3  p-5 justify-stretch">
-            <div className="cursor-pointer">
-              <span onClick={toggleModal} className="text-2xl ">
-                <IoIosMenu />
-              </span>
-              {/* Render the Modal component */}
-              <Modal isOpen={isModalOpen} onClose={closeModal} />
-            </div>
-            <div className="cursor-pointer text-2xl mr-auto ml-auto">
-              <span>MyShop</span>
-            </div>
-            <div className="cursor-pointer ml-auto">
-              <span className="uppercase  ">Cart ( 0 )</span>
-            </div>
+    <div className=" bg-primaryB3  fixed w-full inset-x-0 top-0">
+      <div className=" border-x border-b border-primaryA2 ml-10 mr-12">
+        <div className="md:grid md:grid-cols-3  p-6 justify-stretch">
+          <div className="cursor-pointer">
+            <span onClick={toggleModal} className="text-2xl ">
+              <IoIosMenu />
+            </span>
+            {/* Render the Modal component */}
+            <Modal isOpen={isModalOpen} onClose={closeModal} />
+          </div>
+          <div className="cursor-pointer  text-xl md:text-2xl mx-auto font-modern">
+            <span>MyShop</span>
+          </div>
+          <div className="cursor-pointer  ml-auto">
+            <span className="uppercase  ">Cart ( 0 )</span>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
