@@ -1,4 +1,3 @@
-import Header from "./Header";
 import FifthSection from "./FifthSection";
 import FirstSection from "./FirstSection";
 import FooterSection from "./FooterSection";
@@ -12,8 +11,6 @@ export default function Home() {
   return (
     <div className="bg-primaryB3">
       <div className="ml-10 mr-12">
-        <Header />
-
         <FirstSection />
 
         <SecondSection />

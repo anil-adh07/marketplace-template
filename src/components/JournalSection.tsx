@@ -7,8 +7,8 @@ export default function JournalSection() {
         </div>
         <div className="py-4 text-lg  text-center">
           <p>
-            Lorem posuere purus rhoncus pulvin aliquam ut dead <hr />
-            faliquet vitaien volutpat null aliquet hendre nisi.
+            Lorem posuere purus rhoncus pulvin aliquam ut dead faliquet vitaien
+            volutpat null aliquet hendre nisi.
           </p>
         </div>
         <div className="py-6">

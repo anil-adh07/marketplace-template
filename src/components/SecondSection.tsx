@@ -1,3 +1,5 @@
+import ItemCard from "./ItemsCard";
+
 export default function SecondSection() {
   return (
     <div className="isecond-section border-x border-b border-primaryA2">
@@ -19,38 +21,21 @@ export default function SecondSection() {
           </div>
         </div>
 
-        <div className="second-grid pt-6">
-          <img
-            className="border-l border-primaryA2 pl-3 pr-3 w-full"
-            src="images/image2.jpeg"
-            alt=""
-          ></img>
-          <div className="flex flex-col px-3 py-3 break-words">
-            <div className="flex justify-between text-primaryA1 text-base md:text-lg">
-              <p>Rosemary Scented Candle</p>
-              <p>$45.00 USD</p>
-            </div>
-            <div className="py-2 text-gray-500">
-              <p>CANDLES</p>
-            </div>
-          </div>
-        </div>
-        <div className="third-grid pt-6">
-          <img
-            className="pr-3 pl-3 w-full"
-            src="images/image3.jpg"
-            alt=""
-          ></img>
-          <div className="flex flex-col px-3 py-3 break-words">
-            <div className="flex justify-between text-primaryA1 text-base md:text-lg">
-              <p>Imperial Scented Candle</p>
-              <p>$105.00 USD</p>
-            </div>
-            <div className="py-2 text-gray-500">
-              <p>ACCESSORIES</p>
-            </div>
-          </div>
-        </div>
+        <ItemCard
+          name="Rosemary Scented Candle"
+          price="$ 45.00 USD"
+          image="images/image2.jpeg"
+          category="CANDLES"
+          classname="border-l"
+        />
+
+        <ItemCard
+          name="Imperial Scented Candle"
+          image="images/image3.jpg"
+          price="$ 105.00 USD"
+          category="ACCESSORIES"
+          classname="border-l"
+        />
       </div>
     </div>
   );

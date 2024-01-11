@@ -9,7 +9,7 @@ export default {
       colors: {
         primaryA1: "#533322",
         primaryA2: "#B99D87",
-        primaryA3: "EADCD7",
+        primaryA3: "#EADCD7",
         primaryB1: "#958A86",
         primaryB2: "#D0BEB7",
         primaryB3: "#F3EAE7",

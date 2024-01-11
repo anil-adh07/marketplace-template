@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 export default function FirstSection() {
   return (
-    <div className="grid md:grid-cols-2 border-x border-b border-primaryA2 mt-28 md:mt-20">
+    <div className="grid md:grid-cols-2 border-x border-b border-primaryA2 mt-16 md:mt-20">
       <div className="md:border-r md:border-primaryA2">
         <div className="p-7">
           <img className="w-full" src="images/image1.jpg" alt="Image loading" />
@@ -18,9 +19,11 @@ export default function FirstSection() {
         </div>
 
         <div className="flex p-4 md:p-7">
-          <button className="p-2 md:p-4 border border-primaryA2 text-sm md:text-xl text-center hover:bg-primaryA1 hover:text-white hover:border-primaryB3">
-            Shop Now
-          </button>
+          <Link to="/shop">
+            <button className="p-2 md:p-4 border border-primaryA2 text-sm md:text-xl text-center hover:bg-primaryA1 hover:text-white hover:border-primaryB3">
+              Shop Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>

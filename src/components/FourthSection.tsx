@@ -1,3 +1,5 @@
+import ItemCard from "./ItemsCard";
+
 export default function FourthSection() {
   return (
     <div className="fourth-section border-x border-b border-primaryA2">
@@ -18,39 +20,20 @@ export default function FourthSection() {
             </button>
           </div>
         </div>
-
-        <div className="second-grid pt-6">
-          <img
-            className="border-l border-primaryA2 pl-3 pr-3 w-full"
-            src="images/image5.jpeg"
-            alt=""
-          ></img>
-          <div className="flex flex-col px-3 py-3 break-words">
-            <div className="flex justify-between text-primaryA1 text-base md:text-lg">
-              <p>Rose Magnetic Fragrance</p>
-              <p>$65.00 USD</p>
-            </div>
-            <div className="py-2 text-gray-500">
-              <p>OILS</p>
-            </div>
-          </div>
-        </div>
-        <div className="third-grid pt-6">
-          <img
-            className="pr-3 pl-3 w-full"
-            src="images/image6.jpg"
-            alt=""
-          ></img>
-          <div className="flex flex-col px-3 py-3 break-words">
-            <div className="flex justify-between text-primaryA1 text-base md:text-lg">
-              <p>Bombshell Candle Holder</p>
-              <p>$80.00 USD</p>
-            </div>
-            <div className="py-2 text-gray-500">
-              <p>ACCESSORIES</p>
-            </div>
-          </div>
-        </div>
+        <ItemCard
+          name="Rose Magnetic Fragrance"
+          price="$65.00 USD"
+          category="OILS"
+          image="images/image5.jpeg"
+          classname="border-l"
+        />
+        <ItemCard
+          name="Bombshell Candle Holder"
+          price="$ 80.00 USD"
+          category="ACCESSORIES"
+          image="images/image6.jpg"
+          classname="border-l"
+        />
       </div>
     </div>
   );
