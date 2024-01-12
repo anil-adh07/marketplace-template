@@ -1,6 +1,6 @@
 import ItemCard from "./ItemsCard";
 
-export default function FourthSection() {
+export default function ImageSection() {
   return (
     <div className="fourth-section border-x border-b border-primaryA2">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -15,7 +15,7 @@ export default function FourthSection() {
             </p>
           </div>
           <div className="p-3 break-words">
-            <button className="p-2 md:p-4 border border-primaryA2 text-base md:text-xl text-center hover:bg-primaryA1 hover:text-white hover:border-primaryB3">
+            <button className="p-2 md:p-4  text-primaryA1 border border-primaryA2 text-base md:text-xl text-center hover:bg-primaryA1 hover:text-white hover:border-primaryB3">
               Shop Essentials
             </button>
           </div>

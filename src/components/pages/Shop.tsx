@@ -1,129 +1,105 @@
+import { useState } from "react";
+import shopitems from "../data/shopitems.json";
 import ItemCard from "../ItemsCard";
+import ShopIntroCard from "./ShopIntroCard";
 
-interface items {
-  name: string;
-  price: string;
-  category: string;
-  image: string;
-}
+const categoryInfo: {
+  [key: string]: { heading: string; image: string; description: string };
+} = {
+  All: {
+    heading: "Shop All Our Fragrance",
+    image: "images/shopall.jpeg",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspend varius enim in eros elementum tristique. Duis cursus, mi quis viver ornare, eros dolor interdum nulla.",
+  },
+  Accessories: {
+    heading: "Get All the Accessories",
+    image: "images/acccesorriesShop.jpeg",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspend varius enim in eros elementum tristique. Duis cursus, mi quis viver ornare, eros dolor interdum nulla.",
+  },
+  Oils: {
+    heading: "Essential Oils",
+    image: "images/oilsShop.jpeg",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspend varius enim in eros elementum tristique. Duis cursus, mi quis viver ornare, eros dolor interdum nulla.",
+  },
+  Candles: {
+    heading: "Scented Candles",
+    image: "images/candlesShop.jpeg",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspend varius enim in eros elementum tristique. Duis cursus, mi quis viver ornare, eros dolor interdum nulla.",
+  },
+};
 
-const shopitems: items[] = [
-  {
-    name: "Cocarinne Candles",
-    price: "$ 70.00 USD",
-    category: "Candles",
-    image: "images/candle1.jpg",
-  },
-  {
-    name: "Fragrance Bottle",
-    price: "$ 24.00 USD",
-    category: "Accessories",
-    image: "images/acce1.jpg",
-  },
-  {
-    name: "Oil Eyedropper",
-    price: "$ 40.00 USD",
-    category: "Accessories",
-    image: "images/acce2.jpg",
-  },
-  {
-    name: "Apple Essential Oil",
-    price: "$ 30.00 USD",
-    category: "Oils",
-    image: "images/oils1.jpg",
-  },
-  {
-    name: "Wooden Oil Diffuser",
-    price: "$ 65.00 USD",
-    category: "Accessories",
-    image: "images/acce3.jpg",
-  },
-  {
-    name: "Ceramic Candle Case",
-    price: "$ 85.00 USD",
-    category: "Candles",
-    image: "images/candle2.jpg",
-  },
-  {
-    name: "Almond Butter Fragrance",
-    price: "$ 35.00 USD",
-    category: "Oils",
-    image: "images/oils2.jpg",
-  },
-  {
-    name: "English Body Oil",
-    price: "$ 90.00 USD",
-    category: "Oils",
-    image: "images/oils3.jpeg",
-  },
-  {
-    name: "Bombshell Candle Holder",
-    price: "$ 80.00 USD",
-    category: "Accessories",
-    image: "images/acce4.jpg",
-  },
-  {
-    name: "Rose Magnetic Fragrance",
-    price: "$ 65.00 USD",
-    category: "oils",
-    image: "images/oils4.jpeg",
-  },
-  {
-    name: "Imperial Secented Candle",
-    price: "$ 105.00 USD",
-    category: "Accessories",
-    image: "images/acce5.jpg",
-  },
-  {
-    name: "Rosemary Scented Candle",
-    price: "$ 45.00 USD",
-    category: "Candles",
-    image: "images/candles3.jpeg",
-  },
-];
 const Shop = () => {
-  return (
-    <div className=" mt-16 md:mt-20 bg-primaryB3">
-      <div className="flex flex-col md:flex-row pl-10 pr-12 md:pr-10 flex-1  ">
-        <div className="flex flex-col justify-between  text-primaryA1 flex-1 p-5 border-x border-b border-primaryA2">
-          <h1 className="text-6xl font-normal font-modern p-3 break-words">
-            Shop All Our Fragrance
-          </h1>
-          <p className="text-lg p-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspend
-            varius enim in eros elementum tristique. Duis cursus, mi quis viver
-            ornare, eros dolor interdum nulla.
-          </p>
-        </div>
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const filteredItems = selectedCategory
+    ? shopitems.filter(
+        (items) =>
+          items.category.toLowerCase() === selectedCategory.toLowerCase()
+      )
+    : shopitems;
 
-        <img
-          className=" flex p-8 flex-1 md:w-28 w-full h-auto object-cover border-x md:border-l-0 border-b border-primaryA2 mr-2"
-          src="images/shopall.jpeg"
-          alt=""
-        ></img>
+  const categoryInfoToShow = categoryInfo[selectedCategory || "All"];
+
+  return (
+    <>
+      <div className="flex flex-col md:flex-row flex-1  ">
+        <ShopIntroCard
+          heading={categoryInfoToShow.heading}
+          image={categoryInfoToShow.image}
+          description={categoryInfoToShow.description}
+        />
       </div>
-      <div className="ml-10 mr-12">
-        <div className="flex flex-row justify-center items-center md:space-x-20 p-8 text-primaryA1 border-x border-b border-primaryA2">
-          <button className="p-2 sm:p-4 md:p-0">All</button>
-          <button className="p-2 sm:p-4 md:p-0">Accessories</button>
-          <button className="p-2 sm:p-4 md:p-0">Oils</button>
-          <button className="p-2 sm:p-4 md:p-0">Canldes</button>
-        </div>
+
+      <div className="flex flex-row justify-center items-center text-sm md:text-base md:space-x-14 p-6 text-primaryA1 border-x border-b border-primaryA2">
+        <button
+          onClick={() => setSelectedCategory(null)}
+          className={` ml-1 px-2 md:px-4 md:py-1 rounded-lg ${
+            selectedCategory === null ? "bg-primaryA3" : "bg-none"
+          } `}
+        >
+          All
+        </button>
+        <button
+          onClick={() => setSelectedCategory("Accessories")}
+          className={` ml-1 px-2 md:px-4 md:py-1 rounded-lg ${
+            selectedCategory === "Accessories" ? "bg-primaryA3" : "bg-none"
+          } `}
+        >
+          Accessories
+        </button>
+        <button
+          onClick={() => setSelectedCategory("Oils")}
+          className={` ml-1 px-2 md:px-4 md:py-1 rounded-lg ${
+            selectedCategory === "Oils" ? "bg-primaryA3" : "bg-none"
+          } `}
+        >
+          Oils
+        </button>
+        <button
+          onClick={() => setSelectedCategory("Candles")}
+          className={` ml-1 px-2 md:px-4 md:py-1 rounded-lg ${
+            selectedCategory === "Candles" ? "bg-primaryA3" : "bg-none"
+          } `}
+        >
+          Canldes
+        </button>
       </div>
-      <div className="ml-10 mr-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 border-x border-primaryA2 p-4">
-          {shopitems.map((items, index) => (
-            <ItemCard
-              key={index}
-              name={items.name}
-              price={items.price}
-              category={items.category}
-              image={items.image}
-            />
-          ))}
-        </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 border-x border-b border-primaryA2 p-4">
+        {filteredItems.map((items, index) => (
+          <ItemCard
+            key={index}
+            name={items.name}
+            price={items.price}
+            category={items.category}
+            image={items.image}
+          />
+        ))}
       </div>
-    </div>
+    </>
   );
 };
 export default Shop;

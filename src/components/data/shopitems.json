@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Cocarinne Candles",
+    "price": "$ 70.00 USD",
+    "category": "Candles",
+    "image": "images/candle1.jpg"
+  },
+  {
+    "name": "Fragrance Bottle",
+    "price": "$ 24.00 USD",
+    "category": "Accessories",
+    "image": "images/acce1.jpg"
+  },
+  {
+    "name": "Oil Eyedropper",
+    "price": "$ 40.00 USD",
+    "category": "Accessories",
+    "image": "images/acce2.jpg"
+  },
+  {
+    "name": "Apple Essential Oil",
+    "price": "$ 30.00 USD",
+    "category": "Oils",
+    "image": "images/oils1.jpg"
+  },
+  {
+    "name": "Wooden Oil Diffuser",
+    "price": "$ 65.00 USD",
+    "category": "Accessories",
+    "image": "images/acce3.jpg"
+  },
+  {
+    "name": "Ceramic Candle Case",
+    "price": "$ 85.00 USD",
+    "category": "Candles",
+    "image": "images/candle2.jpg"
+  },
+  {
+    "name": "Almond Butter Fragrance",
+    "price": "$ 35.00 USD",
+    "category": "Oils",
+    "image": "images/oils2.jpg"
+  },
+  {
+    "name": "English Body Oil",
+    "price": "$ 90.00 USD",
+    "category": "Oils",
+    "image": "images/oils3.jpeg"
+  },
+  {
+    "name": "Bombshell Candle Holder",
+    "price": "$ 80.00 USD",
+    "category": "Accessories",
+    "image": "images/acce4.jpg"
+  },
+  {
+    "name": "Rose Magnetic Fragrance",
+    "price": "$ 65.00 USD",
+    "category": "oils",
+    "image": "images/oils4.jpeg"
+  },
+  {
+    "name": "Imperial Secented Candle",
+    "price": "$ 105.00 USD",
+    "category": "Accessories",
+    "image": "images/acce5.jpg"
+  },
+  {
+    "name": "Rosemary Scented Candle",
+    "price": "$ 45.00 USD",
+    "category": "Candles",
+    "image": "images/candles3.jpeg"
+  }
+]

@@ -16,8 +16,8 @@ export default function JournalSection() {
             Visit Journal
           </button>
         </div>
-        <div className="grid grid-cols-3 pt-10 p-4 break-words">
-          <div className="p-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 pt-5 md:pt-10 p-4 break-words">
+          <div className="p-1 md:p-4">
             <img src="images/image8.jpg" alt=""></img>
             <div className="flex flex-col pt-2">
               <p className="text-gray-500">OCT 6, 2023</p>
@@ -26,7 +26,7 @@ export default function JournalSection() {
               </span>
             </div>
           </div>
-          <div className="p-4">
+          <div className="p-1 md:p-4">
             <img src="images/image9.jpg" alt=""></img>
             <div className="flex flex-col pt-2">
               <p className="text-gray-500">OCT 1, 2023</p>
@@ -35,7 +35,7 @@ export default function JournalSection() {
               </span>
             </div>
           </div>
-          <div className="p-4">
+          <div className="p-1 md:p-4">
             <img src="images/image10.jpg" alt=""></img>
             <div className="flex flex-col pt-2">
               <p className="text-gray-500">OCT 9, 2023</p>

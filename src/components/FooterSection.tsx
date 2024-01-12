@@ -3,37 +3,36 @@ export default function FooterSection() {
     <div className="footer-section flex flex-col md:flex-col border-x border-primaryA2 w-full">
       <div className="subscribe-section">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center py-8 md:py-28 px-4 md:px-9">
-          <div className="text-2xl md:text-5xl text-primaryA1 font-modern">
+          <div className="text-2xl md:text-5xl text-primaryA1 font-modern text-center md:text-left">
             <h1>
               Sign up for releases
               <hr /> and product updates
             </h1>
           </div>
           <div>
-            <div className="flex flex-col md:flex-row justify-between border-b focus-within:border-blue-500 py-3">
+            <div className="flex flex-col md:flex-row justify-between md:items-center py-3">
               <input
                 type="text"
                 placeholder="Enter email address"
-                maxLength={256}
-                className="h-16 bg-transparent w-full md:w-auto focus:outline-none p-2 text-lg"
+                className="h-16 bg-transparent w-full md:w-auto focus:outline-none p-2 text-lg border-b border-primaryA2 focus-within:border-blue-500"
               ></input>
-              <button className="p-2 md:p-4 border border-primaryA2 text-lg md:text-base text-center hover:bg-primaryA1 hover:text-white hover:border-primaryB3">
+              <button className="p-2 mt-4 md:p-4 w-40  text-primaryA1 border border-primaryA2 text-lg md:text-base text-center hover:bg-primaryA1 hover:text-white hover:border-primaryB3">
                 Subscribe
               </button>
             </div>
             <div className="p-2 text-gray-500">
               <p>
-                By signing up you agree with our{" "}
-                <span className="text-primaryA1">Terms & Conditions </span>
+                By signing up you agree with our
+                <span className="text-primaryA1"> Terms & Conditions </span>
                 and <span className="text-primaryA1">Privacy Policy.</span>
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="description-section mx-4 md:mx-8">
+      <div className="description-section  mx-auto md:mx-8 text-center md:text-left ">
         <div className="grid md:grid-cols-1 lg:grid-cols-3 border-t border-primaryA2">
-          <div className="first-grid py-8 md:py-10 text-primaryA1">
+          <div className="first-grid py-8 md:py-10 text-primaryA1 ">
             <h1 className="text-2xl md:text-4xl py-4 font-modern">MyShop</h1>
             <p className="text-base md:text-lg pb-2 md:pb-4">
               35 Casberg-Scott Valley Rd. <br />
@@ -42,7 +41,7 @@ export default function FooterSection() {
             <p className="text-base md:text-lg">Tel: (+22) 123 456 678</p>
             <p className="text-base md:text-lg">Email: hello@gmail.com</p>
           </div>
-          <div className="second-grid col-span-2 flex flex-col md:flex-row my-8 border-l border-primaryA2">
+          <div className="second-grid col-span-2 text-center md:text-left flex flex-col text-primaryA1 md:flex-row my-8 md:border-l border-primaryA2">
             <div className="py-8 px-4 md:px-8">
               <h1 className="py-2 text-gray-500">MYSHOP</h1>
               <ul className="text-base md:text-lg">

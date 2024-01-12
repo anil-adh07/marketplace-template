@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <div className=" bg-primaryB3  fixed w-full inset-x-0 top-0">
-      <div className=" md:border-x border-b border-primaryA2 md:ml-10 md:mr-12">
+      <div className=" md:border-x border-b border-primaryA2 md:mx-10">
         <div className="grid grid-cols-3  p-6 justify-stretch text-primaryA1">
           <div className="cursor-pointer">
             <span onClick={toggleModal} className="text-2xl ">
@@ -26,7 +26,7 @@ export default function Header() {
             {/* Render the Modal component */}
             <Modal isOpen={isModalOpen} onClose={closeModal} />
           </div>
-          <div className="cursor-pointer  text-xl md:text-2xl mx-auto font-modern">
+          <div className="cursor-pointer  text-xl md:text-2xl md:mx-auto font-modern">
             <Link to="/">
               <span>MyShop</span>
             </Link>
