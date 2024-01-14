@@ -14,9 +14,9 @@ export default function FooterSection() {
               <input
                 type="text"
                 placeholder="Enter email address"
-                className="h-16 bg-transparent w-full md:w-auto focus:outline-none p-2 text-lg border-b border-primaryA2 focus-within:border-blue-500"
+                className=" text-sm md:h-16 bg-transparent w-full  focus:outline-none p-2 border-b  border-primaryA2 focus-within:border-blue-500"
               ></input>
-              <button className="p-2 mt-4 md:p-4 w-40  text-primaryA1 border border-primaryA2 text-lg md:text-base text-center hover:bg-primaryA1 hover:text-white hover:border-primaryB3">
+              <button className="p-2 mt-4 md:ml-4 md:p-4 md:w-40  text-primaryA1 border border-primaryA2 text-lg md:text-base text-center hover:bg-primaryA1 hover:text-white hover:border-primaryB3">
                 Subscribe
               </button>
             </div>

@@ -16,7 +16,7 @@ export default function JournalSection() {
             Visit Journal
           </button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 pt-5 md:pt-10 p-4 break-words">
+        <div className="grid grid-cols-1 md:grid-cols-3 pt-5 md:pt-10 p-3 break-words">
           <div className="p-1 md:p-4">
             <img src="images/image8.jpg" alt=""></img>
             <div className="flex flex-col pt-2">

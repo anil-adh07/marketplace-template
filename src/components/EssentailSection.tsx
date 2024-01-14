@@ -1,6 +1,8 @@
 import ItemCard from "./ItemsCard";
+import shopitems from "./data/shopitems.json";
 
 export default function ImageSection() {
+  const randomItems = shopitems.sort(() => 0.5 - Math.random()).slice(0, 2);
   return (
     <div className="fourth-section border-x border-b border-primaryA2">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -20,20 +22,21 @@ export default function ImageSection() {
             </button>
           </div>
         </div>
-        <ItemCard
-          name="Rose Magnetic Fragrance"
-          price="$65.00 USD"
-          category="OILS"
-          image="images/image5.jpeg"
-          classname="border-l"
-        />
-        <ItemCard
-          name="Bombshell Candle Holder"
-          price="$ 80.00 USD"
-          category="ACCESSORIES"
-          image="images/image6.jpg"
-          classname="border-l"
-        />
+        {randomItems.map((item, index) => (
+          <ItemCard
+            key={item.slug}
+            slug={item.slug}
+            name={item.name}
+            price={item.price}
+            image={item.image}
+            category={item.category}
+            classname={
+              index === 0
+                ? "md:border-l pl-3 md:pl-6 pr-3"
+                : "pl-3 pr-3 md:pr-6"
+            }
+          />
+        ))}
       </div>
     </div>
   );

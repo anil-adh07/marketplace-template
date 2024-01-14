@@ -1,74 +1,86 @@
 [
   {
+    "slug": "cocarinne-candles",
     "name": "Cocarinne Candles",
-    "price": "$ 70.00 USD",
+    "price": 70.0,
     "category": "Candles",
-    "image": "images/candle1.jpg"
+    "image": "/images/candle1.jpg"
   },
   {
+    "slug": "fragrance-bottle",
     "name": "Fragrance Bottle",
-    "price": "$ 24.00 USD",
+    "price": 24.0,
     "category": "Accessories",
-    "image": "images/acce1.jpg"
+    "image": "/images/acce1.jpg"
   },
   {
+    "slug": "oil-eyedropper",
     "name": "Oil Eyedropper",
-    "price": "$ 40.00 USD",
+    "price": 40.0,
     "category": "Accessories",
-    "image": "images/acce2.jpg"
+    "image": "/images/acce2.jpg"
   },
   {
+    "slug": "apple-essential-oil",
     "name": "Apple Essential Oil",
-    "price": "$ 30.00 USD",
+    "price": 30.0,
     "category": "Oils",
-    "image": "images/oils1.jpg"
+    "image": "/images/oils1.jpg"
   },
   {
+    "slug": "wooden-oil-diffuser",
     "name": "Wooden Oil Diffuser",
-    "price": "$ 65.00 USD",
+    "price": 65.0,
     "category": "Accessories",
-    "image": "images/acce3.jpg"
+    "image": "/images/acce3.jpg"
   },
   {
+    "slug": "ceramic-candle-case",
     "name": "Ceramic Candle Case",
-    "price": "$ 85.00 USD",
+    "price": 85.0,
     "category": "Candles",
-    "image": "images/candle2.jpg"
+    "image": "/images/candle2.jpg"
   },
   {
+    "slug": "almond-butter-fragrance",
     "name": "Almond Butter Fragrance",
-    "price": "$ 35.00 USD",
+    "price": 35.0,
     "category": "Oils",
-    "image": "images/oils2.jpg"
+    "image": "/images/oils2.jpg"
   },
   {
+    "slug": "english-body-oil",
     "name": "English Body Oil",
-    "price": "$ 90.00 USD",
+    "price": 90.0,
     "category": "Oils",
-    "image": "images/oils3.jpeg"
+    "image": "/images/oils3.jpeg"
   },
   {
+    "slug": "bombshell-candle-holder",
     "name": "Bombshell Candle Holder",
-    "price": "$ 80.00 USD",
+    "price": 80.0,
     "category": "Accessories",
-    "image": "images/acce4.jpg"
+    "image": "/images/acce4.jpg"
   },
   {
+    "slug": "rose-magnetic-fragrance",
     "name": "Rose Magnetic Fragrance",
-    "price": "$ 65.00 USD",
+    "price": 65.0,
     "category": "oils",
-    "image": "images/oils4.jpeg"
+    "image": "/images/oils4.jpeg"
   },
   {
+    "slug": "imperial-secented-candle",
     "name": "Imperial Secented Candle",
-    "price": "$ 105.00 USD",
+    "price": 105.0,
     "category": "Accessories",
-    "image": "images/acce5.jpg"
+    "image": "/images/acce5.jpg"
   },
   {
+    "slug": "rosemary-scented-candle",
     "name": "Rosemary Scented Candle",
-    "price": "$ 45.00 USD",
+    "price": 45.0,
     "category": "Candles",
-    "image": "images/candles3.jpeg"
+    "image": "/images/candles3.jpeg"
   }
 ]

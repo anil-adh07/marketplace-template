@@ -8,25 +8,25 @@ const categoryInfo: {
 } = {
   All: {
     heading: "Shop All Our Fragrance",
-    image: "images/shopall.jpeg",
+    image: "/images/shopall.jpeg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspend varius enim in eros elementum tristique. Duis cursus, mi quis viver ornare, eros dolor interdum nulla.",
   },
   Accessories: {
-    heading: "Get All the Accessories",
-    image: "images/acccesorriesShop.jpeg",
+    heading: "Get All The Accessories",
+    image: "/images/acccesorriesShop.jpeg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspend varius enim in eros elementum tristique. Duis cursus, mi quis viver ornare, eros dolor interdum nulla.",
   },
   Oils: {
     heading: "Essential Oils",
-    image: "images/oilsShop.jpeg",
+    image: "/images/oilsShop.jpeg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspend varius enim in eros elementum tristique. Duis cursus, mi quis viver ornare, eros dolor interdum nulla.",
   },
   Candles: {
     heading: "Scented Candles",
-    image: "images/candlesShop.jpeg",
+    image: "/images/candlesShop.jpeg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspend varius enim in eros elementum tristique. Duis cursus, mi quis viver ornare, eros dolor interdum nulla.",
   },
@@ -45,7 +45,7 @@ const Shop = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row flex-1  ">
+      <div className="flex flex-col md:flex-row ">
         <ShopIntroCard
           heading={categoryInfoToShow.heading}
           image={categoryInfoToShow.image}
@@ -89,13 +89,15 @@ const Shop = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 border-x border-b border-primaryA2 p-4">
-        {filteredItems.map((items, index) => (
+        {filteredItems.map((item) => (
           <ItemCard
-            key={index}
-            name={items.name}
-            price={items.price}
-            category={items.category}
-            image={items.image}
+            key={item.slug}
+            slug={item.slug}
+            name={item.name}
+            price={item.price}
+            category={item.category}
+            image={item.image}
+            classname="md:p-4"
           />
         ))}
       </div>

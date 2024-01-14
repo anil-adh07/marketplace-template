@@ -1,9 +1,11 @@
 import ItemCard from "./ItemsCard";
+import shopitems from "./data/shopitems.json";
 
 export default function Introduction() {
+  const randomItems = shopitems.sort(() => 0.5 - Math.random()).slice(0, 2);
   return (
     <div className="isecond-section border-x border-b border-primaryA2">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3">
         <div className="first-half flex flex-col">
           <div className="text-primaryA1 p-5">
             <h1 className="text-3xl md:text-5xl font-modern break-words">
@@ -20,22 +22,21 @@ export default function Introduction() {
             </button>
           </div>
         </div>
-
-        <ItemCard
-          name="Rosemary Scented Candle"
-          price="$ 45.00 USD"
-          image="images/image2.jpeg"
-          category="CANDLES"
-          classname="border-l"
-        />
-
-        <ItemCard
-          name="Imperial Scented Candle"
-          image="images/image3.jpg"
-          price="$ 105.00 USD"
-          category="ACCESSORIES"
-          classname="border-l"
-        />
+        {randomItems.map((item, index) => (
+          <ItemCard
+            key={item.slug}
+            slug={item.slug}
+            name={item.name}
+            price={item.price}
+            image={item.image}
+            category={item.category}
+            classname={
+              index === 0
+                ? "md:border-l pl-3 md:pl-6 pr-3"
+                : "pl-3 pr-3 md:pr-6"
+            }
+          />
+        ))}
       </div>
     </div>
   );

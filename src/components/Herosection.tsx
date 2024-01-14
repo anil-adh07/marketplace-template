@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 export default function Herosection() {
   return (
-    <div className="grid md:grid-cols-2 border-x border-b border-primaryA2 mt-16 md:mt-20">
+    <div className="grid md:grid-cols-2 border-x border-b border-primaryA2">
       <div className="md:border-r md:border-primaryA2">
-        <div className="p-7">
+        <div className=" p-3 md:p-7">
           <img className="w-full" src="images/image1.jpg" alt="Image loading" />
         </div>
       </div>
