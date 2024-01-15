@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ItemCard from "./ItemsCard";
 import shopitems from "./data/shopitems.json";
 
@@ -18,7 +19,7 @@ export default function ImageSection() {
           </div>
           <div className="p-3 break-words">
             <button className="p-2 md:p-4  text-primaryA1 border border-primaryA2 text-base md:text-xl text-center hover:bg-primaryA1 hover:text-white hover:border-primaryB3">
-              Shop Essentials
+              <Link to="/shop">Shop Essentials</Link>
             </button>
           </div>
         </div>

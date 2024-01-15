@@ -1,11 +1,15 @@
 import { IoMdClose } from "react-icons/io";
 import { useCart } from "./CartContext";
+import useOnclickOutside from "react-cool-onclickoutside";
 
 interface CartProps {
   isOpen: boolean;
-  Close?: () => void;
+  Close: () => void;
 }
 const Cart = ({ isOpen, Close }: CartProps) => {
+  const clickOutside = useOnclickOutside(() => {
+    Close();
+  });
   const { state, dispatch } = useCart();
   const removeItem = (itemName: string) => {
     dispatch({
@@ -29,7 +33,8 @@ const Cart = ({ isOpen, Close }: CartProps) => {
     <>
       {isOpen && <div className="fixed inset-0 bg-black bg-opacity-80" />}
       <div
-        className={` fixed right-0 inset-y-0  w-full sm:w-1/3 bg-white transform duration-500 transition-transform ${
+        ref={clickOutside}
+        className={` fixed right-0 inset-y-0 w-full sm:w-1/3 bg-white transform duration-500 transition-transform ${
           isOpen ? "translate-x-0 overflow-y-scroll" : "translate-x-full "
         }`}
       >
@@ -49,7 +54,7 @@ const Cart = ({ isOpen, Close }: CartProps) => {
               {state.cartItems.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-row  items-center justify-between pl-4 pr-6 md:p-4 text-sm md:text-base "
+                  className=" flex flex-row  items-center justify-between pl-4 pr-6 py-4 md:p-4 text-sm md:text-base "
                 >
                   <div className="flex flex-col">
                     <div className="flex flex-row">

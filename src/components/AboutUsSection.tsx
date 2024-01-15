@@ -1,4 +1,5 @@
-const AboutUs = () => {
+import { Link } from "react-router-dom";
+const AboutUsSection = () => {
   return (
     <div className="fifth-section border-x border-primaryA2">
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -22,7 +23,7 @@ const AboutUs = () => {
           </div>
           <div className="p-4 md:p-7">
             <button className="p-2 md:p-4 border border-white text-base md:text-xl text-center text-white hover:bg-white hover:text-primaryA1 hover:border-primaryB3">
-              About Us
+              <Link to="/aboutus">About Us</Link>
             </button>
           </div>
         </div>
@@ -30,4 +31,4 @@ const AboutUs = () => {
     </div>
   );
 };
-export default AboutUs;
+export default AboutUsSection;

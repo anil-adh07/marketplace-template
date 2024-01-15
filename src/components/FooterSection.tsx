@@ -1,4 +1,30 @@
+import { useLocation, useNavigate, Link } from "react-router-dom";
+
 export default function FooterSection() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToshop = (category: string) => {
+    if (location.pathname !== "/shop") {
+      navigate("/shop");
+      console.log(category);
+      setTimeout(() => {
+        const shopSection = document.getElementById(
+          "shop-section"
+        ) as HTMLDivElement;
+        shopSection.scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 500);
+    } else {
+      const shopSection = document.getElementById(
+        "shop-section"
+      ) as HTMLDivElement;
+      shopSection.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <div className="footer-section flex flex-col md:flex-col border-x border-primaryA2 w-full">
       <div className="subscribe-section">
@@ -43,18 +69,40 @@ export default function FooterSection() {
           </div>
           <div className="second-grid col-span-2 text-center md:text-left flex flex-col text-primaryA1 md:flex-row my-8 md:border-l border-primaryA2">
             <div className="py-8 px-4 md:px-8">
-              <h1 className="py-2 text-gray-500">MYSHOP</h1>
-              <ul className="text-base md:text-lg">
-                <li className="py-1 md:py-2">Shop</li>
-                <li className="py-1 md:py-2">Oils</li>
-                <li className="py-1 md:py-2">Accessories</li>
-                <li className="py-1 md:py-2">Candles</li>
-              </ul>
+              <p className="py-2 text-gray-500">MYSHOP</p>
+              <div className="flex flex-col items-center md:items-start text-base md:text-lg">
+                <button
+                  onClick={() => scrollToshop("All")}
+                  className="py-1 md:py-2"
+                >
+                  Shop
+                </button>
+                <button
+                  onClick={() => scrollToshop("Oils")}
+                  className="py-1 md:py-2"
+                >
+                  Oils
+                </button>
+                <button
+                  onClick={() => scrollToshop("Accessories")}
+                  className="py-1 md:py-2"
+                >
+                  Accessories
+                </button>
+                <button
+                  onClick={() => scrollToshop("Candles")}
+                  className="py-1 md:py-2"
+                >
+                  Candles
+                </button>
+              </div>
             </div>
             <div className="py-8 px-4 md:px-8">
-              <h1 className="py-2 text-gray-500">COMPANY</h1>
+              <p className="py-2 text-gray-500">COMPANY</p>
               <ul className="text-base md:text-lg">
-                <li className="py-1 md:py-2">About</li>
+                <li className="py-1 md:py-2">
+                  <Link to="/aboutus">About</Link>
+                </li>
                 <li className="py-1 md:py-2">Journal</li>
                 <li className="py-1 md:py-2">Contact</li>
                 <li className="py-1 md:py-2">Privacy</li>
@@ -63,7 +111,7 @@ export default function FooterSection() {
               </ul>
             </div>
             <div className="py-8 px-4 md:px-8">
-              <h1 className="py-2 text-gray-500">TEMPLATE</h1>
+              <p className="py-2 text-gray-500">TEMPLATE</p>
               <ul className="text-base md:text-lg">
                 <li className="py-1 md:py-2">Style Guide</li>
                 <li className="py-1 md:py-2">Support</li>

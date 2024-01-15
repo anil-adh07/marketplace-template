@@ -45,7 +45,7 @@ const Shop = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row ">
+      <div className="flex flex-col md:flex-row" id="shop-section">
         <ShopIntroCard
           heading={categoryInfoToShow.heading}
           image={categoryInfoToShow.image}

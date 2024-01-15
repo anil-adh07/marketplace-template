@@ -1,5 +1,6 @@
 import { IoMdClose } from "react-icons/io";
 import useOnclickOutside from "react-cool-onclickoutside";
+import { Link } from "react-router-dom";
 
 interface ModalProps {
   isOpen: boolean;
@@ -35,12 +36,16 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
           <ul className="text-3xl  md:text-6xl font-serif">
             <li className="border-b py-4 mx-8 md:py-9 md:mx-16 border-primaryA2 text-primaryA1 hover:text-opacity-85">
               <div className="transition-transform duration-300 hover:translate-x-2 sm:hover:translate-x-7">
-                Shop
+                <Link onClick={onClose} to="/shop">
+                  Shop
+                </Link>
               </div>
             </li>
             <li className="border-b py-4 mx-8 md:py-9 md:mx-16 border-primaryA2 text-primaryA1 hover:text-opacity-85">
               <div className="transition-transform duration-300 hover:translate-x-2 sm:hover:translate-x-7">
-                About
+                <Link onClick={onClose} to="/aboutus">
+                  About
+                </Link>
               </div>
             </li>
             <li className="border-b py-4 mx-8 md:py-9 md:mx-16 border-primaryA2 text-primaryA1 hover:text-opacity-85">

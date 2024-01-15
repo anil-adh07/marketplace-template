@@ -34,6 +34,7 @@ const ItemsDetailsPage = () => {
     if (existingCartItemIndex !== -1) {
       const updatedCartItems = [...state.cartItems];
       updatedCartItems[existingCartItemIndex].quantity += quantity;
+      localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
 
       dispatch({
         type: "UPDATE_TO_CART",
@@ -57,7 +58,7 @@ const ItemsDetailsPage = () => {
     }
   };
 
-  const randomItems = shopitems.sort(() => 0.5 - Math.random()).slice(0, 2);
+  const randomItems = shopitems.sort(() => Math.random()).slice(0, 2);
 
   return (
     <>
@@ -72,7 +73,9 @@ const ItemsDetailsPage = () => {
 
         <div className="flex flex-col py-6 text-primaryA1 md:border-l border-primaryA2 w-full">
           <div className="mx-8 border-b border-primaryA2">
-            <p className="text-gray-500 py-5"> {SelectedItems.category}</p>
+            <p className="text-gray-500 py-5">
+              {SelectedItems.category.toUpperCase()}
+            </p>
             <h1 className="font-modern text-3xl md:text-5xl pb-5 break-words">
               {SelectedItems.name}
             </h1>
