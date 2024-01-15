@@ -4,9 +4,9 @@ export default function FooterSection() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const scrollToshop = (category: string) => {
+  const scrollToshop = (category: string | null) => {
     if (location.pathname !== "/shop") {
-      navigate("/shop");
+      navigate(`shop/${category}`);
       console.log(category);
       setTimeout(() => {
         const shopSection = document.getElementById(
@@ -17,12 +17,15 @@ export default function FooterSection() {
         });
       }, 500);
     } else {
-      const shopSection = document.getElementById(
-        "shop-section"
-      ) as HTMLDivElement;
-      shopSection.scrollIntoView({
-        behavior: "smooth",
-      });
+      navigate(`shop/${category}`);
+      setTimeout(() => {
+        const shopSection = document.getElementById(
+          "shop-section"
+        ) as HTMLDivElement;
+        shopSection.scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 500);
     }
   };
   return (
@@ -72,7 +75,7 @@ export default function FooterSection() {
               <p className="py-2 text-gray-500">MYSHOP</p>
               <div className="flex flex-col items-center md:items-start text-base md:text-lg">
                 <button
-                  onClick={() => scrollToshop("All")}
+                  onClick={() => navigate("/shop")}
                   className="py-1 md:py-2"
                 >
                   Shop

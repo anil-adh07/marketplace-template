@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import shopitems from "../data/shopitems.json";
 import ItemCard from "../ItemsCard";
 import ShopIntroCard from "./ShopIntroCard";
@@ -33,7 +34,17 @@ const categoryInfo: {
 };
 
 const Shop = () => {
+  const params = useParams();
+  console.log(params.slug);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  useEffect(() => {
+    if (!params.slug) {
+      setSelectedCategory(null);
+    } else {
+      setSelectedCategory(params.slug);
+    }
+  }, [params.slug]);
+
   const filteredItems = selectedCategory
     ? shopitems.filter(
         (items) =>
