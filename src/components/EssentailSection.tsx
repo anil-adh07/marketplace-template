@@ -3,11 +3,11 @@ import ItemCard from "./ItemsCard";
 import shopitems from "./data/shopitems.json";
 
 export default function ImageSection() {
-  const randomItems = shopitems.sort(() => 0.5 - Math.random()).slice(0, 2);
+  const randomItems = shopitems.sort(() => Math.random()).slice(0, 2);
   return (
     <div className="fourth-section border-x border-b border-primaryA2">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <div className="first-half flex flex-col">
+        <div className="flex flex-col items-center text-center md:text-left md:items-start">
           <div className="text-primaryA1 p-5 break-words">
             <h1 className="text-3xl md:text-5xl font-modern">
               Snap up our absolutes

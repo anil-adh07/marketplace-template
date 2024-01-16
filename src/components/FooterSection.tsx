@@ -7,7 +7,6 @@ export default function FooterSection() {
   const scrollToshop = (category: string | null) => {
     if (location.pathname !== "/shop") {
       navigate(`shop/${category}`);
-      console.log(category);
       setTimeout(() => {
         const shopSection = document.getElementById(
           "shop-section"
@@ -32,12 +31,9 @@ export default function FooterSection() {
     <div className="footer-section flex flex-col md:flex-col border-x border-primaryA2 w-full">
       <div className="subscribe-section">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center py-8 md:py-28 px-4 md:px-9">
-          <div className="text-2xl md:text-5xl text-primaryA1 font-modern text-center md:text-left">
-            <h1>
-              Sign up for releases
-              <hr /> and product updates
-            </h1>
-          </div>
+          <h1 className="text-2xl md:text-5xl text-primaryA1 font-modern text-center md:text-left">
+            Sign up for releases and product updates
+          </h1>
           <div>
             <div className="flex flex-col md:flex-row justify-between md:items-center py-3">
               <input

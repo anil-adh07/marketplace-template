@@ -7,7 +7,7 @@ export default function Herosection() {
           <img className="w-full" src="images/image1.jpg" alt="Image loading" />
         </div>
       </div>
-      <div className="flex md:p-20 items-center flex-col">
+      <div className="flex md:p-20 items-center flex-col justify-center">
         <div className="text-primaryA1">
           <h1 className="text-4xl md:text-7xl font-modern text-center break-words">
             A Fresh Start with Nature's Luxury
