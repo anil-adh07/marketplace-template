@@ -32,7 +32,7 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
             <div>CLOSE</div>
           </button>
         </div>
-        <div className="md:h-[80vh] lg:h-850 border border-primaryA2 ml-5 inset-0">
+        <div className="h-[80vh] lg:h-850 border border-primaryA2 ml-5 inset-0">
           <ul className="text-3xl  md:text-6xl font-serif">
             <li className="border-b py-4 mx-8 md:py-6 lg:py-8 md:mx-10 lg:mx-16 border-primaryA2 text-primaryA1 hover:text-opacity-85">
               <div className="transition-transform duration-300 hover:translate-x-2 sm:hover:translate-x-7">
