@@ -20,7 +20,7 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
       )}
       <div
         ref={ref}
-        className={` flex flex-col justify-between fixed left-0 top-0 h-screen w-full sm:w-1/2 bg-primaryB3 transform transition-transform duration-500 overflow-hidden ${
+        className={` flex flex-col justify-between fixed left-0 top-0  w-full sm:w-1/2 bg-primaryB3 transform transition-transform duration-500 overflow-hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full overflow-hidden"
         }`}
       >
@@ -32,28 +32,28 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
             <div>CLOSE</div>
           </button>
         </div>
-        <div className="container h-850 border border-primaryA2 ml-5">
+        <div className="md:h-[80vh] lg:h-850 border border-primaryA2 ml-5 inset-0">
           <ul className="text-3xl  md:text-6xl font-serif">
-            <li className="border-b py-4 mx-8 md:py-9 md:mx-16 border-primaryA2 text-primaryA1 hover:text-opacity-85">
+            <li className="border-b py-4 mx-8 md:py-6 lg:py-8 md:mx-10 lg:mx-16 border-primaryA2 text-primaryA1 hover:text-opacity-85">
               <div className="transition-transform duration-300 hover:translate-x-2 sm:hover:translate-x-7">
                 <Link onClick={onClose} to="/shop">
                   Shop
                 </Link>
               </div>
             </li>
-            <li className="border-b py-4 mx-8 md:py-9 md:mx-16 border-primaryA2 text-primaryA1 hover:text-opacity-85">
+            <li className="border-b py-4 mx-8 md:py-6 lg:py-8 md:mx-10 lg:mx-16 border-primaryA2 text-primaryA1 hover:text-opacity-85">
               <div className="transition-transform duration-300 hover:translate-x-2 sm:hover:translate-x-7">
                 <Link onClick={onClose} to="/aboutus">
                   About
                 </Link>
               </div>
             </li>
-            <li className="border-b py-4 mx-8 md:py-9 md:mx-16 border-primaryA2 text-primaryA1 hover:text-opacity-85">
+            <li className="border-b py-4 mx-8 md:py-6 lg:py-8 md:mx-10 lg:mx-16 border-primaryA2 text-primaryA1 hover:text-opacity-85">
               <div className="transition-transform duration-300 hover:translate-x-2 sm:hover:translate-x-7">
                 Journal
               </div>
             </li>
-            <li className="border-b py-4 mx-8 md:py-9 md:mx-16 border-primaryA2 text-primaryA1 hover:text-opacity-85">
+            <li className="border-b py-4 mx-8 md:py-6 lg:py-8 md:mx-10 lg:mx-16 border-primaryA2 text-primaryA1 hover:text-opacity-85">
               <div className="transition-transform duration-300 hover:translate-x-2 sm:hover:translate-x-7">
                 Contact
               </div>

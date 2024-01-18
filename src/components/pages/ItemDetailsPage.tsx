@@ -86,7 +86,7 @@ const ItemsDetailsPage = () => {
           </div>
           <div className="m-3 md:m-8 flex flex-col border-primaryA2 w-full text-balance break-words">
             <p className="text-gray-400">DESCRIPTION</p>
-            <p className="py-6 text-balance break-words pr-3">
+            <p className="py-6 text-balance break-words pr-3 max-w-72 lg:max-w-xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
               placeat, distinctio dolorum nemo porro laudantium corporis illum
               harum quibusdam. Id explicabo temporibus doloribus aliquam hic.
@@ -127,7 +127,7 @@ const ItemsDetailsPage = () => {
             </form>
             <button
               onClick={handleAddToCart}
-              className=" my-2 md:my-0 py-2 px-4 md:py-4 md:px-8 border border-white text-base md:text-xl text-center bg-primaryA1 text-white hover:bg-transparent hover:text-primaryA1 hover:border-primaryA2"
+              className=" my-2 md:my-0 py-2 px-4 lg:py-4 lg:px-8 border border-white text-base lg:text-xl text-center bg-primaryA1 text-white hover:bg-transparent hover:text-primaryA1 hover:border-primaryA2"
             >
               Add To Cart
             </button>

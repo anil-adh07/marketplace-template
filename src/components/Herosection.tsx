@@ -4,15 +4,19 @@ export default function Herosection() {
     <div className="grid md:grid-cols-2 border-x border-b border-primaryA2">
       <div className="md:border-r md:border-primaryA2">
         <div className=" p-3 md:p-7">
-          <img className="w-full" src="images/image1.jpg" alt="Image loading" />
+          <img
+            className="w-auto h-auto"
+            src="images/image1.jpg"
+            alt="Image loading"
+          />
         </div>
       </div>
-      <div className="flex md:p-20 items-center flex-col justify-center">
+      <div className="flex md:p-8 lg:p-20 items-center flex-col justify-center">
         <div className="text-primaryA1">
-          <h1 className="text-4xl md:text-7xl font-modern text-center break-words">
+          <h1 className="text-3xl md:text-4xl lg:text-7xl font-modern text-center break-words">
             A Fresh Start with Nature's Luxury
           </h1>
-          <p className="text-sm md:text-lg p-4 md:p-12 text-center break-words">
+          <p className="text-sm md:text-lg p-4 md:p-8 lg:p-12 text-center break-words">
             An elegant and clean e-commerce template for luxurious fragrance
             brands.
           </p>

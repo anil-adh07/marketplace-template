@@ -99,7 +99,7 @@ const Shop = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 border-x border-b border-primaryA2 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 border-x border-b border-primaryA2 lg:p-4">
         {filteredItems.map((item) => (
           <ItemCard
             key={item.slug}
@@ -108,7 +108,7 @@ const Shop = () => {
             price={item.price}
             category={item.category}
             image={item.image}
-            classname="md:p-4"
+            classname="lg:p-4 md:p-2"
           />
         ))}
       </div>

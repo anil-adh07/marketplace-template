@@ -23,7 +23,7 @@ const AboutUs = () => {
             <h1 className="text-3xl md:text-5xl font-modern pt-8 text-center pb-4">
               Our Story
             </h1>
-            <p className="text-center pb-4">
+            <p className="text-center text-balance pb-4">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
               nobis inventore id possimus, nulla nisi asperiores? Ipsum
               molestiae impedit delectus ut laboriosam dolores numquam vitae!
@@ -36,7 +36,7 @@ const AboutUs = () => {
           Once in our History
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 mt-10 text-balance">
-          <div className="md:border-r border-b md:border-b-0 border-primaryA2 my-4 pr-8">
+          <div className="md:border-r border-b md:border-b-0 border-primaryA2 my-4 lg:pr-8">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
               deserunt ex neque odit sapiente. Numquam reprehenderit excepturi
@@ -81,17 +81,17 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 border-b border-x border-primaryA2">
-        <div className=" md:ml-5 md:my-5 mt-5 mx-5 md:mx-0">
+        <div className=" md:ml-5 md:my-5 mt-3 mx-3 md:mx-0">
           <img
-            className="h-screen w-screen md:w-full object-cover p-8 bg-primaryA1"
+            className=" h-64 md:h-auto lg:h-screen w-screen md:w-full object-cover p-4 lg:p-8 bg-primaryA1"
             src="/images/founder.avif"
             alt="image"
           ></img>
         </div>
 
-        <div className=" flex justify-center items-center md:mr-5 md:my-5 mx-5 md:mx-0 mb-5 bg-primaryA1">
-          <div className="text-white md:w-full">
-            <h1 className="text-4xl md:text-5xl leading-10 font-modern md:text-left text-center mt-5">
+        <div className=" flex justify-center items-center md:mr-5 md:my-5 mx-3 md:mx-0 mb-5 bg-primaryA1">
+          <div className="text-white md:w-full ml-3 lg:mx-3">
+            <h1 className="text-4xl lg:text-5xl leading-10 font-modern md:text-left text-center mt-5">
               Message From the Founder- Sarah Naoh
             </h1>
             <p className="py-4 mx-4 md:mr-4 md:ml-0 text-center md:text-left">
